@@ -1,0 +1,49 @@
+<Homescreen>:
+    MDFloatLayout:
+        md_bg_color: 1, 1, 1, 1
+    Image:
+        source:"Resources/Assets/Welcome Illust.png"
+        size_hint: .5, .5 
+        pos_hint: {'center_x': 0.5,'center_y': 0.73}
+    MDLabel:
+        text: "Selamat Datang"
+        halign: "center"
+        font_size: "20sp"
+        font_name: 'BMontserrat'
+        pos_hint: {'center_y': 0.6}
+
+    MDFillRoundFlatButton: 
+        text: "LOGIN"
+        md_bg_color: rgba(249, 97, 74, 255)
+        font_name: 'BMontserrat'
+        size_hint: .6, .075
+        pos_hint: {'center_x': 0.5,'center_y': 0.45}
+        on_release:
+            root.manager.transition.direction ="left"
+            root.manager.current ="login"
+            
+    MDRoundFlatButton: 
+        text: "SIGNUP"
+        text_color: rgba(249, 97, 74, 255)
+        line_color: rgba(249, 97, 74, 255)
+        font_name: 'BMontserrat'
+        size_hint: .6, .075
+        pos_hint: {'center_x': 0.5,'center_y': 0.35}
+        on_release:
+            root.manager.transition.direction ="left"
+            root.manager.current ="signup"
+
+
+
+
+
+
+ #footer       
+    MDLabel:
+        text: "Scan Raray v.1.0 by Ale"
+        halign: "center" 
+        font_size: "8.5sp"
+        color: rgba(71, 57, 61, 150) 
+        font_name: 'MMontserrat'
+        size_hint_x: .5
+        pos_hint: {'center_x':0.5 ,'center_y': 0.02}

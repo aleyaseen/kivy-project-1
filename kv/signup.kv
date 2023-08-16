@@ -1,0 +1,80 @@
+<Signup>:
+    MDFloatLayout:
+        MDIconButton:
+            icon: "arrow-left"
+            pos_hint: {'center_x': 0.1, 'center_y': 0.92}
+            on_release:
+                root.manager.transition.direction = "left"
+                root.manager.current = "welcome"
+        MDLabel:
+            text: "Signup Screen"
+            halign: "center"
+            font_size: "20sp"
+            font_name: 'BMontserrat'
+            pos_hint: {'center_y': 0.75}
+
+        MDTextField:
+            id: full_name_input
+            font_name: 'BMontserrat'
+            hint_text: "Full Name"
+            font_size: "16sp"
+            size_hint: .6, .06
+            size: "250dp", "40dp"
+            pos_hint: {"center_x": 0.5, "top": 0.65}
+            mode: "round"
+
+        MDTextField:
+            id: email_input
+            font_name: 'BMontserrat'
+            hint_text: "Email"
+            font_size: "16sp"
+            size_hint: .6, .06
+            size: "250dp", "40dp"
+            pos_hint: {"center_x": 0.5, "top": 0.55}
+            mode: "round"
+
+        MDTextField:
+            id: password_input
+            hint_text: "Password"
+            font_size: "16sp"
+            pos_hint: {"center_x": 0.5, "top": 0.45}
+            size_hint: .6, .06
+            mode: "round"
+            password: True
+
+        MDFillRoundFlatButton: 
+            text: "SIGNUP"
+            font_size: "15sp"
+            md_bg_color: rgba(249, 97, 74, 255)
+            font_name: 'BMontserrat'
+            size_hint: .4, .075
+            pos_hint: {'center_x': 0.5, 'center_y': 0.3}
+            on_release:
+                root.manager.transition.direction = "left"
+                app.signup()
+
+        MDLabel:
+            text: "Already have an account?"
+            halign: "center"
+            font_size: "10sp"
+            font_name: 'BMontserrat'
+            pos_hint: {'center_y': 0.2}
+            theme_text_color: "Secondary"
+
+        MDTextButton:
+            text: "Login"
+            font_size: "11sp"
+            font_name: 'BMontserrat'
+            pos_hint: {"center_x": .5, "center_y": 0.176}
+            on_release: 
+                root.manager.current = "login"
+
+        #footer       
+        MDLabel:
+            text: "Mobile Attendance System by Ale"
+            halign: "center" 
+            font_size: "8.5sp"
+            color: rgba(71, 57, 61, 150) 
+            font_name: 'MMontserrat'
+            size_hint_x: .5
+            pos_hint: {'center_x':0.5 ,'center_y': 0.02}
